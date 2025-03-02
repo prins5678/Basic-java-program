@@ -1,0 +1,20 @@
+public class reversDigits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input=new Scanner(System.in);
+System.out.print("enter your number: ");
+int num=input.nextInt();
+int reversDigits=reversDigits(num);
+System.out.print("Revers of your number is: " +reversDigits);
+	}
+public static int reversDigits(int num) {
+	int newnum=0;
+	while (num > 0) {
+		int digits = num %10;
+		newnum=newnum*10+digits;
+		num /=10;
+	}
+	return newnum;
+}
+}
