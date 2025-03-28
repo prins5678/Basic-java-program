@@ -1,0 +1,46 @@
+package challenge;
+import java.util.Scanner;
+
+public class SumandAverageOf2DArray {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to 2D Array Sum and Average Calculator");
+        
+        System.out.print("Enter number of rows: ");
+        int rows = input.nextInt();
+        System.out.print("Enter number of columns: ");
+        int cols = input.nextInt();
+        
+        int[][] numArr = new int[rows][cols];
+        
+        System.out.println("Enter elements of the 2D array:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                numArr[i][j] = input.nextInt();
+            }
+        }
+        
+        int sum = calculateSum(numArr);
+        double average = calculateAverage(numArr, rows, cols);
+        
+        System.out.println("Sum of all elements: " + sum);
+        System.out.println("Average of all elements: " + average);
+        
+        input.close(); // Close the scanner to prevent resource leak
+    }
+
+    public static int calculateSum(int[][] numArr) {
+        int sum = 0;
+        for (int i = 0; i < numArr.length; i++) {
+            for (int j = 0; j < numArr[i].length; j++) {
+                sum += numArr[i][j];
+            }
+        }
+        return sum;
+    }
+
+    public static double calculateAverage(int[][] numArr, int rows, int cols) {
+        int sum = calculateSum(numArr);
+        return (double) sum / (rows * cols);
+    }
+}
