@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class categorizeofperson {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input=new Scanner(System.in);
+System.out.println("welcome to categorize of person");
+System.out.print("enter your age: ");
+int age=input.nextInt();
+if(age >= 60) {
+	System.out.println("you have a senior");
+}else if(age >= 20) {
+	System.out.println("you have a adult");
+}else if(age >= 13) {
+	System.out.println("you have a teen");
+}else {
+	System.out.println("you have a child");
+}
+	}
+
+}
