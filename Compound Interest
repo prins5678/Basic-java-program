@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class compoundinterest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input=new Scanner(System.in);
+System.out.println("welcome to compound interest calculator");
+System.out.print("enter your problem no. : ");
+int problem=input.nextInt();
+System.out.print("enter your random no. :");
+float random=input.nextFloat();
+System.out.print("Now enter your timeing:");
+float timeing=input.nextFloat();
+double interest=problem*(1+random/100)*timeing;
+System.out.println("The compound interest is :" + interest);
+	}
+
+}
