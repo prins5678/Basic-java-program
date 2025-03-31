@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class bitwiseOR {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input=new Scanner(System.in);
+System.out.print("entetr your first number: ");
+int first=input.nextInt();
+System.out.print("enter your second number: ");
+int second=input.nextInt();
+int result=first | second;
+System.out.println("the result is: " +result);
+}
+
+}
