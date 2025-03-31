@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class ReverseArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input=new Scanner(System.in);
+int [] numArr = ArrayUtility.InputArray();
+reverse (numArr);
+System.out.print("your reverse number is:");
+ArrayUtility.displayArray(numArr);
+	}
+public static void reverse(int[] arr) {
+	int i =0;
+	while(i < arr.length/2) {
+		int swap = arr[i];
+		arr[i]= arr[(arr.length -1) -i];
+		arr[(arr.length - 1) -i] = swap;
+		i++;
+	}
+}
+}
